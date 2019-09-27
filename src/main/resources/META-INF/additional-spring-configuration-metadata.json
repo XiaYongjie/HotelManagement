@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "sql-script-encoding",
+      "type": "java.lang.String",
+      "description": "Description for sql-script-encoding."
+  }
+] }
