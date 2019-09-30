@@ -113,4 +113,14 @@
         and
         s.role_id = r.id
     </select>
+    <select id="selectAll" resultType="java.util.Map">
+        select  s.id, s.`name`, s.`password`, s.is_delete,  r.name as role
+        from
+            shop_staff_member s,
+            shop_staff_member_role r
+        where
+            s.is_delete  = 0
+            and
+            s.role_id = r.id
+    </select>
 </mapper>

@@ -3,6 +3,7 @@ package com.hcyq.hotel.staff.dao;
 import com.hcyq.hotel.staff.entity.StaffEntity;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
 import java.util.Map;
 
 
@@ -21,4 +22,6 @@ public interface StaffMapper {
     int updateByPrimaryKey(StaffEntity record);
 
     Map<String,Object> selectById(int id);
+
+    List<Map<String,Object>> selectAll();
 }

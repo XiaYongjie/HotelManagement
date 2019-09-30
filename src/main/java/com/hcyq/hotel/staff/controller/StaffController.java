@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -42,6 +43,12 @@ public class StaffController {
             return Result.toSuccess(staff);
         }
         return Result.toSuccess("查无此人", "");
+    }
+
+    @GetMapping("/getAllStaff")
+    public String getStaff() {
+        List<Map<String, Object>> staffs = staffServer.getStaffAll();
+        return Result.toSuccess(staffs);
     }
 
 }

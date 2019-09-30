@@ -29,7 +29,7 @@ public class StaffServiceImp implements StaffService {
 
     @Override
     public List<Map<String, Object>> getStaffAll() {
-        return null;
+        return staffMapper.selectAll();
     }
 
 }
